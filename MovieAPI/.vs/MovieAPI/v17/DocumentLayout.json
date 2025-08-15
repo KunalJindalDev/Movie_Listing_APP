@@ -1,0 +1,926 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\kunal\\Bootcamp\\Csharp\\bootcamp_new\\Rest Assignment-4\\MovieAPI\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{AD73F8E3-1DAF-4C87-9DD6-94AE1C80B10F}|MovieApp.csproj|c:\\users\\kunal\\bootcamp\\csharp\\bootcamp_new\\rest assignment-4\\movieapi\\services\\actorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD73F8E3-1DAF-4C87-9DD6-94AE1C80B10F}|MovieApp.csproj|solutionrelative:services\\actorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD73F8E3-1DAF-4C87-9DD6-94AE1C80B10F}|MovieApp.csproj|c:\\users\\kunal\\bootcamp\\csharp\\bootcamp_new\\rest assignment-4\\movieapi\\services\\genreservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD73F8E3-1DAF-4C87-9DD6-94AE1C80B10F}|MovieApp.csproj|solutionrelative:services\\genreservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD73F8E3-1DAF-4C87-9DD6-94AE1C80B10F}|MovieApp.csproj|c:\\users\\kunal\\bootcamp\\csharp\\bootcamp_new\\rest assignment-4\\movieapi\\models\\dbmodels\\actor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD73F8E3-1DAF-4C87-9DD6-94AE1C80B10F}|MovieApp.csproj|solutionrelative:models\\dbmodels\\actor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD73F8E3-1DAF-4C87-9DD6-94AE1C80B10F}|MovieApp.csproj|c:\\users\\kunal\\bootcamp\\csharp\\bootcamp_new\\rest assignment-4\\movieapi\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD73F8E3-1DAF-4C87-9DD6-94AE1C80B10F}|MovieApp.csproj|solutionrelative:startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD73F8E3-1DAF-4C87-9DD6-94AE1C80B10F}|MovieApp.csproj|c:\\users\\kunal\\bootcamp\\csharp\\bootcamp_new\\rest assignment-4\\movieapi\\controllers\\actorscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD73F8E3-1DAF-4C87-9DD6-94AE1C80B10F}|MovieApp.csproj|solutionrelative:controllers\\actorscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD73F8E3-1DAF-4C87-9DD6-94AE1C80B10F}|MovieApp.csproj|c:\\users\\kunal\\bootcamp\\csharp\\bootcamp_new\\rest assignment-4\\movieapi\\repositories\\actorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD73F8E3-1DAF-4C87-9DD6-94AE1C80B10F}|MovieApp.csproj|solutionrelative:repositories\\actorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD73F8E3-1DAF-4C87-9DD6-94AE1C80B10F}|MovieApp.csproj|c:\\users\\kunal\\bootcamp\\csharp\\bootcamp_new\\rest assignment-4\\movieapi\\repositories\\interfaces\\iactorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD73F8E3-1DAF-4C87-9DD6-94AE1C80B10F}|MovieApp.csproj|solutionrelative:repositories\\interfaces\\iactorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD73F8E3-1DAF-4C87-9DD6-94AE1C80B10F}|MovieApp.csproj|c:\\users\\kunal\\bootcamp\\csharp\\bootcamp_new\\rest assignment-4\\movieapi\\services\\interfaces\\iactorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD73F8E3-1DAF-4C87-9DD6-94AE1C80B10F}|MovieApp.csproj|solutionrelative:services\\interfaces\\iactorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD73F8E3-1DAF-4C87-9DD6-94AE1C80B10F}|MovieApp.csproj|c:\\users\\kunal\\bootcamp\\csharp\\bootcamp_new\\rest assignment-4\\movieapi\\repositories\\baserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD73F8E3-1DAF-4C87-9DD6-94AE1C80B10F}|MovieApp.csproj|solutionrelative:repositories\\baserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD73F8E3-1DAF-4C87-9DD6-94AE1C80B10F}|MovieApp.csproj|c:\\users\\kunal\\bootcamp\\csharp\\bootcamp_new\\rest assignment-4\\movieapi\\repositories\\movierepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD73F8E3-1DAF-4C87-9DD6-94AE1C80B10F}|MovieApp.csproj|solutionrelative:repositories\\movierepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD73F8E3-1DAF-4C87-9DD6-94AE1C80B10F}|MovieApp.csproj|c:\\users\\kunal\\bootcamp\\csharp\\bootcamp_new\\rest assignment-4\\movieapi\\helpers\\supabaseuploader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD73F8E3-1DAF-4C87-9DD6-94AE1C80B10F}|MovieApp.csproj|solutionrelative:helpers\\supabaseuploader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD73F8E3-1DAF-4C87-9DD6-94AE1C80B10F}|MovieApp.csproj|c:\\users\\kunal\\bootcamp\\csharp\\bootcamp_new\\rest assignment-4\\movieapi\\exceptions\\notfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD73F8E3-1DAF-4C87-9DD6-94AE1C80B10F}|MovieApp.csproj|solutionrelative:exceptions\\notfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD73F8E3-1DAF-4C87-9DD6-94AE1C80B10F}|MovieApp.csproj|c:\\users\\kunal\\bootcamp\\csharp\\bootcamp_new\\rest assignment-4\\movieapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD73F8E3-1DAF-4C87-9DD6-94AE1C80B10F}|MovieApp.csproj|solutionrelative:controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD73F8E3-1DAF-4C87-9DD6-94AE1C80B10F}|MovieApp.csproj|c:\\users\\kunal\\bootcamp\\csharp\\bootcamp_new\\rest assignment-4\\movieapi\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD73F8E3-1DAF-4C87-9DD6-94AE1C80B10F}|MovieApp.csproj|solutionrelative:services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD73F8E3-1DAF-4C87-9DD6-94AE1C80B10F}|MovieApp.csproj|c:\\users\\kunal\\bootcamp\\csharp\\bootcamp_new\\rest assignment-4\\movieapi\\repositories\\genrerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD73F8E3-1DAF-4C87-9DD6-94AE1C80B10F}|MovieApp.csproj|solutionrelative:repositories\\genrerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD73F8E3-1DAF-4C87-9DD6-94AE1C80B10F}|MovieApp.csproj|c:\\users\\kunal\\bootcamp\\csharp\\bootcamp_new\\rest assignment-4\\movieapi\\controllers\\moviescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD73F8E3-1DAF-4C87-9DD6-94AE1C80B10F}|MovieApp.csproj|solutionrelative:controllers\\moviescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD73F8E3-1DAF-4C87-9DD6-94AE1C80B10F}|MovieApp.csproj|c:\\users\\kunal\\bootcamp\\csharp\\bootcamp_new\\rest assignment-4\\movieapi\\repositories\\producerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD73F8E3-1DAF-4C87-9DD6-94AE1C80B10F}|MovieApp.csproj|solutionrelative:repositories\\producerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD73F8E3-1DAF-4C87-9DD6-94AE1C80B10F}|MovieApp.csproj|c:\\users\\kunal\\bootcamp\\csharp\\bootcamp_new\\rest assignment-4\\movieapi\\models\\responsemodels\\movieresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD73F8E3-1DAF-4C87-9DD6-94AE1C80B10F}|MovieApp.csproj|solutionrelative:models\\responsemodels\\movieresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD73F8E3-1DAF-4C87-9DD6-94AE1C80B10F}|MovieApp.csproj|c:\\users\\kunal\\bootcamp\\csharp\\bootcamp_new\\rest assignment-4\\movieapi\\models\\responsemodels\\actorresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD73F8E3-1DAF-4C87-9DD6-94AE1C80B10F}|MovieApp.csproj|solutionrelative:models\\responsemodels\\actorresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD73F8E3-1DAF-4C87-9DD6-94AE1C80B10F}|MovieApp.csproj|c:\\users\\kunal\\bootcamp\\csharp\\bootcamp_new\\rest assignment-4\\movieapi\\models\\responsemodels\\producerresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD73F8E3-1DAF-4C87-9DD6-94AE1C80B10F}|MovieApp.csproj|solutionrelative:models\\responsemodels\\producerresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD73F8E3-1DAF-4C87-9DD6-94AE1C80B10F}|MovieApp.csproj|c:\\users\\kunal\\bootcamp\\csharp\\bootcamp_new\\rest assignment-4\\movieapi\\models\\dbmodels\\movie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD73F8E3-1DAF-4C87-9DD6-94AE1C80B10F}|MovieApp.csproj|solutionrelative:models\\dbmodels\\movie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD73F8E3-1DAF-4C87-9DD6-94AE1C80B10F}|MovieApp.csproj|c:\\users\\kunal\\bootcamp\\csharp\\bootcamp_new\\rest assignment-4\\movieapi\\services\\movieservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD73F8E3-1DAF-4C87-9DD6-94AE1C80B10F}|MovieApp.csproj|solutionrelative:services\\movieservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD73F8E3-1DAF-4C87-9DD6-94AE1C80B10F}|MovieApp.csproj|c:\\users\\kunal\\bootcamp\\csharp\\bootcamp_new\\rest assignment-4\\movieapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{AD73F8E3-1DAF-4C87-9DD6-94AE1C80B10F}|MovieApp.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD73F8E3-1DAF-4C87-9DD6-94AE1C80B10F}|MovieApp.csproj|c:\\users\\kunal\\bootcamp\\csharp\\bootcamp_new\\rest assignment-4\\movieapi\\controllers\\genrescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD73F8E3-1DAF-4C87-9DD6-94AE1C80B10F}|MovieApp.csproj|solutionrelative:controllers\\genrescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD73F8E3-1DAF-4C87-9DD6-94AE1C80B10F}|MovieApp.csproj|c:\\users\\kunal\\bootcamp\\csharp\\bootcamp_new\\rest assignment-4\\movieapi\\repositories\\reviewrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD73F8E3-1DAF-4C87-9DD6-94AE1C80B10F}|MovieApp.csproj|solutionrelative:repositories\\reviewrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD73F8E3-1DAF-4C87-9DD6-94AE1C80B10F}|MovieApp.csproj|c:\\users\\kunal\\bootcamp\\csharp\\bootcamp_new\\rest assignment-4\\movieapi\\services\\reviewservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD73F8E3-1DAF-4C87-9DD6-94AE1C80B10F}|MovieApp.csproj|solutionrelative:services\\reviewservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD73F8E3-1DAF-4C87-9DD6-94AE1C80B10F}|MovieApp.csproj|c:\\users\\kunal\\bootcamp\\csharp\\bootcamp_new\\rest assignment-4\\movieapi\\controllers\\reviewscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD73F8E3-1DAF-4C87-9DD6-94AE1C80B10F}|MovieApp.csproj|solutionrelative:controllers\\reviewscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD73F8E3-1DAF-4C87-9DD6-94AE1C80B10F}|MovieApp.csproj|c:\\users\\kunal\\bootcamp\\csharp\\bootcamp_new\\rest assignment-4\\movieapi\\models\\requestmodels\\actorrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD73F8E3-1DAF-4C87-9DD6-94AE1C80B10F}|MovieApp.csproj|solutionrelative:models\\requestmodels\\actorrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD73F8E3-1DAF-4C87-9DD6-94AE1C80B10F}|MovieApp.csproj|c:\\users\\kunal\\bootcamp\\csharp\\bootcamp_new\\rest assignment-4\\movieapi\\repositories\\interfaces\\imovierepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD73F8E3-1DAF-4C87-9DD6-94AE1C80B10F}|MovieApp.csproj|solutionrelative:repositories\\interfaces\\imovierepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD73F8E3-1DAF-4C87-9DD6-94AE1C80B10F}|MovieApp.csproj|c:\\users\\kunal\\bootcamp\\csharp\\bootcamp_new\\rest assignment-4\\movieapi\\models\\requestmodels\\producerrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD73F8E3-1DAF-4C87-9DD6-94AE1C80B10F}|MovieApp.csproj|solutionrelative:models\\requestmodels\\producerrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD73F8E3-1DAF-4C87-9DD6-94AE1C80B10F}|MovieApp.csproj|c:\\users\\kunal\\bootcamp\\csharp\\bootcamp_new\\rest assignment-4\\movieapi\\models\\requestmodels\\movierequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD73F8E3-1DAF-4C87-9DD6-94AE1C80B10F}|MovieApp.csproj|solutionrelative:models\\requestmodels\\movierequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD73F8E3-1DAF-4C87-9DD6-94AE1C80B10F}|MovieApp.csproj|c:\\users\\kunal\\bootcamp\\csharp\\bootcamp_new\\rest assignment-4\\movieapi\\models\\enums\\gender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD73F8E3-1DAF-4C87-9DD6-94AE1C80B10F}|MovieApp.csproj|solutionrelative:models\\enums\\gender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD73F8E3-1DAF-4C87-9DD6-94AE1C80B10F}|MovieApp.csproj|c:\\users\\kunal\\bootcamp\\csharp\\bootcamp_new\\rest assignment-4\\movieapi\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{AD73F8E3-1DAF-4C87-9DD6-94AE1C80B10F}|MovieApp.csproj|solutionrelative:properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD73F8E3-1DAF-4C87-9DD6-94AE1C80B10F}|MovieApp.csproj|c:\\users\\kunal\\bootcamp\\csharp\\bootcamp_new\\rest assignment-4\\movieapi\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD73F8E3-1DAF-4C87-9DD6-94AE1C80B10F}|MovieApp.csproj|solutionrelative:repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD73F8E3-1DAF-4C87-9DD6-94AE1C80B10F}|MovieApp.csproj|c:\\users\\kunal\\bootcamp\\csharp\\bootcamp_new\\rest assignment-4\\movieapi\\models\\dbmodels\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD73F8E3-1DAF-4C87-9DD6-94AE1C80B10F}|MovieApp.csproj|solutionrelative:models\\dbmodels\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD73F8E3-1DAF-4C87-9DD6-94AE1C80B10F}|MovieApp.csproj|c:\\users\\kunal\\bootcamp\\csharp\\bootcamp_new\\rest assignment-4\\movieapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD73F8E3-1DAF-4C87-9DD6-94AE1C80B10F}|MovieApp.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD73F8E3-1DAF-4C87-9DD6-94AE1C80B10F}|MovieApp.csproj|c:\\users\\kunal\\bootcamp\\csharp\\bootcamp_new\\rest assignment-4\\movieapi\\controllers\\producerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD73F8E3-1DAF-4C87-9DD6-94AE1C80B10F}|MovieApp.csproj|solutionrelative:controllers\\producerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD73F8E3-1DAF-4C87-9DD6-94AE1C80B10F}|MovieApp.csproj|c:\\users\\kunal\\bootcamp\\csharp\\bootcamp_new\\rest assignment-4\\movieapi\\services\\producerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD73F8E3-1DAF-4C87-9DD6-94AE1C80B10F}|MovieApp.csproj|solutionrelative:services\\producerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD73F8E3-1DAF-4C87-9DD6-94AE1C80B10F}|MovieApp.csproj|c:\\users\\kunal\\bootcamp\\csharp\\bootcamp_new\\rest assignment-4\\movieapi\\services\\interfaces\\iproducerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD73F8E3-1DAF-4C87-9DD6-94AE1C80B10F}|MovieApp.csproj|solutionrelative:services\\interfaces\\iproducerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD73F8E3-1DAF-4C87-9DD6-94AE1C80B10F}|MovieApp.csproj|c:\\users\\kunal\\bootcamp\\csharp\\bootcamp_new\\rest assignment-4\\movieapi\\services\\interfaces\\imovieservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD73F8E3-1DAF-4C87-9DD6-94AE1C80B10F}|MovieApp.csproj|solutionrelative:services\\interfaces\\imovieservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD73F8E3-1DAF-4C87-9DD6-94AE1C80B10F}|MovieApp.csproj|c:\\users\\kunal\\bootcamp\\csharp\\bootcamp_new\\rest assignment-4\\movieapi\\movieapp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{AD73F8E3-1DAF-4C87-9DD6-94AE1C80B10F}|MovieApp.csproj|solutionrelative:movieapp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD73F8E3-1DAF-4C87-9DD6-94AE1C80B10F}|MovieApp.csproj|c:\\users\\kunal\\bootcamp\\csharp\\bootcamp_new\\rest assignment-4\\movieapi\\services\\interfaces\\ireviewservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD73F8E3-1DAF-4C87-9DD6-94AE1C80B10F}|MovieApp.csproj|solutionrelative:services\\interfaces\\ireviewservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD73F8E3-1DAF-4C87-9DD6-94AE1C80B10F}|MovieApp.csproj|c:\\users\\kunal\\bootcamp\\csharp\\bootcamp_new\\rest assignment-4\\movieapi\\services\\interfaces\\igenreservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD73F8E3-1DAF-4C87-9DD6-94AE1C80B10F}|MovieApp.csproj|solutionrelative:services\\interfaces\\igenreservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD73F8E3-1DAF-4C87-9DD6-94AE1C80B10F}|MovieApp.csproj|c:\\users\\kunal\\bootcamp\\csharp\\bootcamp_new\\rest assignment-4\\movieapi\\models\\requestmodels\\genrerequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD73F8E3-1DAF-4C87-9DD6-94AE1C80B10F}|MovieApp.csproj|solutionrelative:models\\requestmodels\\genrerequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD73F8E3-1DAF-4C87-9DD6-94AE1C80B10F}|MovieApp.csproj|c:\\users\\kunal\\bootcamp\\csharp\\bootcamp_new\\rest assignment-4\\movieapi\\models\\requestmodels\\reviewrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD73F8E3-1DAF-4C87-9DD6-94AE1C80B10F}|MovieApp.csproj|solutionrelative:models\\requestmodels\\reviewrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD73F8E3-1DAF-4C87-9DD6-94AE1C80B10F}|MovieApp.csproj|c:\\users\\kunal\\bootcamp\\csharp\\bootcamp_new\\rest assignment-4\\movieapi\\models\\responsemodels\\reviewresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD73F8E3-1DAF-4C87-9DD6-94AE1C80B10F}|MovieApp.csproj|solutionrelative:models\\responsemodels\\reviewresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD73F8E3-1DAF-4C87-9DD6-94AE1C80B10F}|MovieApp.csproj|c:\\users\\kunal\\bootcamp\\csharp\\bootcamp_new\\rest assignment-4\\movieapi\\models\\responsemodels\\loginresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD73F8E3-1DAF-4C87-9DD6-94AE1C80B10F}|MovieApp.csproj|solutionrelative:models\\responsemodels\\loginresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD73F8E3-1DAF-4C87-9DD6-94AE1C80B10F}|MovieApp.csproj|c:\\users\\kunal\\bootcamp\\csharp\\bootcamp_new\\rest assignment-4\\movieapi\\models\\responsemodels\\genreresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD73F8E3-1DAF-4C87-9DD6-94AE1C80B10F}|MovieApp.csproj|solutionrelative:models\\responsemodels\\genreresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD73F8E3-1DAF-4C87-9DD6-94AE1C80B10F}|MovieApp.csproj|c:\\users\\kunal\\bootcamp\\csharp\\bootcamp_new\\rest assignment-4\\movieapi\\repositories\\interfaces\\ireviewrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD73F8E3-1DAF-4C87-9DD6-94AE1C80B10F}|MovieApp.csproj|solutionrelative:repositories\\interfaces\\ireviewrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD73F8E3-1DAF-4C87-9DD6-94AE1C80B10F}|MovieApp.csproj|c:\\users\\kunal\\bootcamp\\csharp\\bootcamp_new\\rest assignment-4\\movieapi\\repositories\\interfaces\\iproducerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD73F8E3-1DAF-4C87-9DD6-94AE1C80B10F}|MovieApp.csproj|solutionrelative:repositories\\interfaces\\iproducerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD73F8E3-1DAF-4C87-9DD6-94AE1C80B10F}|MovieApp.csproj|c:\\users\\kunal\\bootcamp\\csharp\\bootcamp_new\\rest assignment-4\\movieapi\\repositories\\interfaces\\igenrerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD73F8E3-1DAF-4C87-9DD6-94AE1C80B10F}|MovieApp.csproj|solutionrelative:repositories\\interfaces\\igenrerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD73F8E3-1DAF-4C87-9DD6-94AE1C80B10F}|MovieApp.csproj|c:\\users\\kunal\\bootcamp\\csharp\\bootcamp_new\\rest assignment-4\\movieapi\\models\\dbmodels\\review.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD73F8E3-1DAF-4C87-9DD6-94AE1C80B10F}|MovieApp.csproj|solutionrelative:models\\dbmodels\\review.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD73F8E3-1DAF-4C87-9DD6-94AE1C80B10F}|MovieApp.csproj|c:\\users\\kunal\\bootcamp\\csharp\\bootcamp_new\\rest assignment-4\\movieapi\\models\\dbmodels\\producer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD73F8E3-1DAF-4C87-9DD6-94AE1C80B10F}|MovieApp.csproj|solutionrelative:models\\dbmodels\\producer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD73F8E3-1DAF-4C87-9DD6-94AE1C80B10F}|MovieApp.csproj|c:\\users\\kunal\\bootcamp\\csharp\\bootcamp_new\\rest assignment-4\\movieapi\\models\\dbmodels\\genre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD73F8E3-1DAF-4C87-9DD6-94AE1C80B10F}|MovieApp.csproj|solutionrelative:models\\dbmodels\\genre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD73F8E3-1DAF-4C87-9DD6-94AE1C80B10F}|MovieApp.csproj|c:\\users\\kunal\\bootcamp\\csharp\\bootcamp_new\\rest assignment-4\\movieapi\\models\\requestmodels\\loginrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD73F8E3-1DAF-4C87-9DD6-94AE1C80B10F}|MovieApp.csproj|solutionrelative:models\\requestmodels\\loginrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD73F8E3-1DAF-4C87-9DD6-94AE1C80B10F}|MovieApp.csproj|c:\\users\\kunal\\bootcamp\\csharp\\bootcamp_new\\rest assignment-4\\movieapi\\models\\requestmodels\\signuprequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD73F8E3-1DAF-4C87-9DD6-94AE1C80B10F}|MovieApp.csproj|solutionrelative:models\\requestmodels\\signuprequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ActorsController.cs",
+              "DocumentMoniker": "C:\\Users\\kunal\\Bootcamp\\Csharp\\bootcamp_new\\Rest Assignment-4\\MovieAPI\\Controllers\\ActorsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ActorsController.cs",
+              "ToolTip": "C:\\Users\\kunal\\Bootcamp\\Csharp\\bootcamp_new\\Rest Assignment-4\\MovieAPI\\Controllers\\ActorsController.cs",
+              "RelativeToolTip": "Controllers\\ActorsController.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAgwBEAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-02T04:57:30.699Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ActorRepository.cs",
+              "DocumentMoniker": "C:\\Users\\kunal\\Bootcamp\\Csharp\\bootcamp_new\\Rest Assignment-4\\MovieAPI\\Repositories\\ActorRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\ActorRepository.cs",
+              "ToolTip": "C:\\Users\\kunal\\Bootcamp\\Csharp\\bootcamp_new\\Rest Assignment-4\\MovieAPI\\Repositories\\ActorRepository.cs",
+              "RelativeToolTip": "Repositories\\ActorRepository.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAmwBYAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-01T09:54:23.713Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ActorService.cs",
+              "DocumentMoniker": "C:\\Users\\kunal\\Bootcamp\\Csharp\\bootcamp_new\\Rest Assignment-4\\MovieAPI\\Services\\ActorService.cs",
+              "RelativeDocumentMoniker": "Services\\ActorService.cs",
+              "ToolTip": "C:\\Users\\kunal\\Bootcamp\\Csharp\\bootcamp_new\\Rest Assignment-4\\MovieAPI\\Services\\ActorService.cs",
+              "RelativeToolTip": "Services\\ActorService.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAAwBUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-01T10:00:00.953Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IActorRepository.cs",
+              "DocumentMoniker": "C:\\Users\\kunal\\Bootcamp\\Csharp\\bootcamp_new\\Rest Assignment-4\\MovieAPI\\Repositories\\Interfaces\\IActorRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\Interfaces\\IActorRepository.cs",
+              "ToolTip": "C:\\Users\\kunal\\Bootcamp\\Csharp\\bootcamp_new\\Rest Assignment-4\\MovieAPI\\Repositories\\Interfaces\\IActorRepository.cs",
+              "RelativeToolTip": "Repositories\\Interfaces\\IActorRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAgAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-02T04:40:04.076Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Actor.cs",
+              "DocumentMoniker": "C:\\Users\\kunal\\Bootcamp\\Csharp\\bootcamp_new\\Rest Assignment-4\\MovieAPI\\Models\\DBModels\\Actor.cs",
+              "RelativeDocumentMoniker": "Models\\DBModels\\Actor.cs",
+              "ToolTip": "C:\\Users\\kunal\\Bootcamp\\Csharp\\bootcamp_new\\Rest Assignment-4\\MovieAPI\\Models\\DBModels\\Actor.cs",
+              "RelativeToolTip": "Models\\DBModels\\Actor.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAQAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-02T04:39:07.079Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Startup.cs",
+              "DocumentMoniker": "C:\\Users\\kunal\\Bootcamp\\Csharp\\bootcamp_new\\Rest Assignment-4\\MovieAPI\\Startup.cs",
+              "RelativeDocumentMoniker": "Startup.cs",
+              "ToolTip": "C:\\Users\\kunal\\Bootcamp\\Csharp\\bootcamp_new\\Rest Assignment-4\\MovieAPI\\Startup.cs",
+              "RelativeToolTip": "Startup.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-02T05:44:18.124Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "GenreService.cs",
+              "DocumentMoniker": "C:\\Users\\kunal\\Bootcamp\\Csharp\\bootcamp_new\\Rest Assignment-4\\MovieAPI\\Services\\GenreService.cs",
+              "RelativeDocumentMoniker": "Services\\GenreService.cs",
+              "ToolTip": "C:\\Users\\kunal\\Bootcamp\\Csharp\\bootcamp_new\\Rest Assignment-4\\MovieAPI\\Services\\GenreService.cs",
+              "RelativeToolTip": "Services\\GenreService.cs",
+              "ViewState": "AgIAAD0AAAAAAAAAAAAkwAgAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-02T04:54:52.878Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "IActorService.cs",
+              "DocumentMoniker": "C:\\Users\\kunal\\Bootcamp\\Csharp\\bootcamp_new\\Rest Assignment-4\\MovieAPI\\Services\\Interfaces\\IActorService.cs",
+              "RelativeDocumentMoniker": "Services\\Interfaces\\IActorService.cs",
+              "ToolTip": "C:\\Users\\kunal\\Bootcamp\\Csharp\\bootcamp_new\\Rest Assignment-4\\MovieAPI\\Services\\Interfaces\\IActorService.cs",
+              "RelativeToolTip": "Services\\Interfaces\\IActorService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-01T09:58:39.054Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "BaseRepository.cs",
+              "DocumentMoniker": "C:\\Users\\kunal\\Bootcamp\\Csharp\\bootcamp_new\\Rest Assignment-4\\MovieAPI\\Repositories\\BaseRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\BaseRepository.cs",
+              "ToolTip": "C:\\Users\\kunal\\Bootcamp\\Csharp\\bootcamp_new\\Rest Assignment-4\\MovieAPI\\Repositories\\BaseRepository.cs",
+              "RelativeToolTip": "Repositories\\BaseRepository.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAYwCkAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-08T04:24:57.409Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "MovieRepository.cs",
+              "DocumentMoniker": "C:\\Users\\kunal\\Bootcamp\\Csharp\\bootcamp_new\\Rest Assignment-4\\MovieAPI\\Repositories\\MovieRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\MovieRepository.cs",
+              "ToolTip": "C:\\Users\\kunal\\Bootcamp\\Csharp\\bootcamp_new\\Rest Assignment-4\\MovieAPI\\Repositories\\MovieRepository.cs",
+              "RelativeToolTip": "Repositories\\MovieRepository.cs",
+              "ViewState": "AgIAADgAAAAAAAAAAAAiwJQAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-01T09:52:30.927Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "SupabaseUploader.cs",
+              "DocumentMoniker": "C:\\Users\\kunal\\Bootcamp\\Csharp\\bootcamp_new\\Rest Assignment-4\\MovieAPI\\Helpers\\SupabaseUploader.cs",
+              "RelativeDocumentMoniker": "Helpers\\SupabaseUploader.cs",
+              "ToolTip": "C:\\Users\\kunal\\Bootcamp\\Csharp\\bootcamp_new\\Rest Assignment-4\\MovieAPI\\Helpers\\SupabaseUploader.cs",
+              "RelativeToolTip": "Helpers\\SupabaseUploader.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-08T06:29:40.269Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "NotFoundException.cs",
+              "DocumentMoniker": "C:\\Users\\kunal\\Bootcamp\\Csharp\\bootcamp_new\\Rest Assignment-4\\MovieAPI\\Exceptions\\NotFoundException.cs",
+              "RelativeDocumentMoniker": "Exceptions\\NotFoundException.cs",
+              "ToolTip": "C:\\Users\\kunal\\Bootcamp\\Csharp\\bootcamp_new\\Rest Assignment-4\\MovieAPI\\Exceptions\\NotFoundException.cs",
+              "RelativeToolTip": "Exceptions\\NotFoundException.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T04:17:12.12Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\kunal\\Bootcamp\\Csharp\\bootcamp_new\\Rest Assignment-4\\MovieAPI\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\kunal\\Bootcamp\\Csharp\\bootcamp_new\\Rest Assignment-4\\MovieAPI\\Controllers\\UserController.cs",
+              "RelativeToolTip": "Controllers\\UserController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-02T06:03:17.632Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\Users\\kunal\\Bootcamp\\Csharp\\bootcamp_new\\Rest Assignment-4\\MovieAPI\\Services\\UserService.cs",
+              "RelativeDocumentMoniker": "Services\\UserService.cs",
+              "ToolTip": "C:\\Users\\kunal\\Bootcamp\\Csharp\\bootcamp_new\\Rest Assignment-4\\MovieAPI\\Services\\UserService.cs",
+              "RelativeToolTip": "Services\\UserService.cs",
+              "ViewState": "AgIAAE8AAAAAAAAAAAAkwGkAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-02T05:16:09.559Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "GenreRepository.cs",
+              "DocumentMoniker": "C:\\Users\\kunal\\Bootcamp\\Csharp\\bootcamp_new\\Rest Assignment-4\\MovieAPI\\Repositories\\GenreRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\GenreRepository.cs",
+              "ToolTip": "C:\\Users\\kunal\\Bootcamp\\Csharp\\bootcamp_new\\Rest Assignment-4\\MovieAPI\\Repositories\\GenreRepository.cs",
+              "RelativeToolTip": "Repositories\\GenreRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACgAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-01T09:54:28.468Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "MoviesController.cs",
+              "DocumentMoniker": "C:\\Users\\kunal\\Bootcamp\\Csharp\\bootcamp_new\\Rest Assignment-4\\MovieAPI\\Controllers\\MoviesController.cs",
+              "RelativeDocumentMoniker": "Controllers\\MoviesController.cs",
+              "ToolTip": "C:\\Users\\kunal\\Bootcamp\\Csharp\\bootcamp_new\\Rest Assignment-4\\MovieAPI\\Controllers\\MoviesController.cs",
+              "RelativeToolTip": "Controllers\\MoviesController.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAxwCAAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-02T04:56:42.75Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "ProducerRepository.cs",
+              "DocumentMoniker": "C:\\Users\\kunal\\Bootcamp\\Csharp\\bootcamp_new\\Rest Assignment-4\\MovieAPI\\Repositories\\ProducerRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\ProducerRepository.cs",
+              "ToolTip": "C:\\Users\\kunal\\Bootcamp\\Csharp\\bootcamp_new\\Rest Assignment-4\\MovieAPI\\Repositories\\ProducerRepository.cs",
+              "RelativeToolTip": "Repositories\\ProducerRepository.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAD4vycAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-01T09:54:32.913Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "MovieResponse.cs",
+              "DocumentMoniker": "C:\\Users\\kunal\\Bootcamp\\Csharp\\bootcamp_new\\Rest Assignment-4\\MovieAPI\\Models\\ResponseModels\\MovieResponse.cs",
+              "RelativeDocumentMoniker": "Models\\ResponseModels\\MovieResponse.cs",
+              "ToolTip": "C:\\Users\\kunal\\Bootcamp\\Csharp\\bootcamp_new\\Rest Assignment-4\\MovieAPI\\Models\\ResponseModels\\MovieResponse.cs",
+              "RelativeToolTip": "Models\\ResponseModels\\MovieResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-02T04:34:21.01Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "ActorResponse.cs",
+              "DocumentMoniker": "C:\\Users\\kunal\\Bootcamp\\Csharp\\bootcamp_new\\Rest Assignment-4\\MovieAPI\\Models\\ResponseModels\\ActorResponse.cs",
+              "RelativeDocumentMoniker": "Models\\ResponseModels\\ActorResponse.cs",
+              "ToolTip": "C:\\Users\\kunal\\Bootcamp\\Csharp\\bootcamp_new\\Rest Assignment-4\\MovieAPI\\Models\\ResponseModels\\ActorResponse.cs",
+              "RelativeToolTip": "Models\\ResponseModels\\ActorResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-01T08:50:51.026Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "ProducerResponse.cs",
+              "DocumentMoniker": "C:\\Users\\kunal\\Bootcamp\\Csharp\\bootcamp_new\\Rest Assignment-4\\MovieAPI\\Models\\ResponseModels\\ProducerResponse.cs",
+              "RelativeDocumentMoniker": "Models\\ResponseModels\\ProducerResponse.cs",
+              "ToolTip": "C:\\Users\\kunal\\Bootcamp\\Csharp\\bootcamp_new\\Rest Assignment-4\\MovieAPI\\Models\\ResponseModels\\ProducerResponse.cs",
+              "RelativeToolTip": "Models\\ResponseModels\\ProducerResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-02T04:34:35.501Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Movie.cs",
+              "DocumentMoniker": "C:\\Users\\kunal\\Bootcamp\\Csharp\\bootcamp_new\\Rest Assignment-4\\MovieAPI\\Models\\DBModels\\Movie.cs",
+              "RelativeDocumentMoniker": "Models\\DBModels\\Movie.cs",
+              "ToolTip": "C:\\Users\\kunal\\Bootcamp\\Csharp\\bootcamp_new\\Rest Assignment-4\\MovieAPI\\Models\\DBModels\\Movie.cs",
+              "RelativeToolTip": "Models\\DBModels\\Movie.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-01T08:43:06.64Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "MovieService.cs",
+              "DocumentMoniker": "C:\\Users\\kunal\\Bootcamp\\Csharp\\bootcamp_new\\Rest Assignment-4\\MovieAPI\\Services\\MovieService.cs",
+              "RelativeDocumentMoniker": "Services\\MovieService.cs",
+              "ToolTip": "C:\\Users\\kunal\\Bootcamp\\Csharp\\bootcamp_new\\Rest Assignment-4\\MovieAPI\\Services\\MovieService.cs",
+              "RelativeToolTip": "Services\\MovieService.cs",
+              "ViewState": "AgIAAJcAAAAAAAAAAAAAABcAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-01T09:59:23.614Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\kunal\\Bootcamp\\Csharp\\bootcamp_new\\Rest Assignment-4\\MovieAPI\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\kunal\\Bootcamp\\Csharp\\bootcamp_new\\Rest Assignment-4\\MovieAPI\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAADrAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-04-02T05:50:27.25Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "GenresController.cs",
+              "DocumentMoniker": "C:\\Users\\kunal\\Bootcamp\\Csharp\\bootcamp_new\\Rest Assignment-4\\MovieAPI\\Controllers\\GenresController.cs",
+              "RelativeDocumentMoniker": "Controllers\\GenresController.cs",
+              "ToolTip": "C:\\Users\\kunal\\Bootcamp\\Csharp\\bootcamp_new\\Rest Assignment-4\\MovieAPI\\Controllers\\GenresController.cs",
+              "RelativeToolTip": "Controllers\\GenresController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-02T04:58:27.062Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "ReviewService.cs",
+              "DocumentMoniker": "C:\\Users\\kunal\\Bootcamp\\Csharp\\bootcamp_new\\Rest Assignment-4\\MovieAPI\\Services\\ReviewService.cs",
+              "RelativeDocumentMoniker": "Services\\ReviewService.cs",
+              "ToolTip": "C:\\Users\\kunal\\Bootcamp\\Csharp\\bootcamp_new\\Rest Assignment-4\\MovieAPI\\Services\\ReviewService.cs",
+              "RelativeToolTip": "Services\\ReviewService.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAYwFoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-02T04:55:01.496Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "ReviewRepository.cs",
+              "DocumentMoniker": "C:\\Users\\kunal\\Bootcamp\\Csharp\\bootcamp_new\\Rest Assignment-4\\MovieAPI\\Repositories\\ReviewRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\ReviewRepository.cs",
+              "ToolTip": "C:\\Users\\kunal\\Bootcamp\\Csharp\\bootcamp_new\\Rest Assignment-4\\MovieAPI\\Repositories\\ReviewRepository.cs",
+              "RelativeToolTip": "Repositories\\ReviewRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-01T09:54:37.092Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "ReviewsController.cs",
+              "DocumentMoniker": "C:\\Users\\kunal\\Bootcamp\\Csharp\\bootcamp_new\\Rest Assignment-4\\MovieAPI\\Controllers\\ReviewsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ReviewsController.cs",
+              "ToolTip": "C:\\Users\\kunal\\Bootcamp\\Csharp\\bootcamp_new\\Rest Assignment-4\\MovieAPI\\Controllers\\ReviewsController.cs",
+              "RelativeToolTip": "Controllers\\ReviewsController.cs",
+              "ViewState": "AgIAADIAAAAAAAAAAAAgwFcAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-02T04:58:51.699Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "ActorRequest.cs",
+              "DocumentMoniker": "C:\\Users\\kunal\\Bootcamp\\Csharp\\bootcamp_new\\Rest Assignment-4\\MovieAPI\\Models\\RequestModels\\ActorRequest.cs",
+              "RelativeDocumentMoniker": "Models\\RequestModels\\ActorRequest.cs",
+              "ToolTip": "C:\\Users\\kunal\\Bootcamp\\Csharp\\bootcamp_new\\Rest Assignment-4\\MovieAPI\\Models\\RequestModels\\ActorRequest.cs",
+              "RelativeToolTip": "Models\\RequestModels\\ActorRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-01T08:48:22.899Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "IMovieRepository.cs",
+              "DocumentMoniker": "C:\\Users\\kunal\\Bootcamp\\Csharp\\bootcamp_new\\Rest Assignment-4\\MovieAPI\\Repositories\\Interfaces\\IMovieRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\Interfaces\\IMovieRepository.cs",
+              "ToolTip": "C:\\Users\\kunal\\Bootcamp\\Csharp\\bootcamp_new\\Rest Assignment-4\\MovieAPI\\Repositories\\Interfaces\\IMovieRepository.cs",
+              "RelativeToolTip": "Repositories\\Interfaces\\IMovieRepository.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAsAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-01T09:51:39.858Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "ProducerRequest.cs",
+              "DocumentMoniker": "C:\\Users\\kunal\\Bootcamp\\Csharp\\bootcamp_new\\Rest Assignment-4\\MovieAPI\\Models\\RequestModels\\ProducerRequest.cs",
+              "RelativeDocumentMoniker": "Models\\RequestModels\\ProducerRequest.cs",
+              "ToolTip": "C:\\Users\\kunal\\Bootcamp\\Csharp\\bootcamp_new\\Rest Assignment-4\\MovieAPI\\Models\\RequestModels\\ProducerRequest.cs",
+              "RelativeToolTip": "Models\\RequestModels\\ProducerRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-02T04:32:23.044Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "MovieRequest.cs",
+              "DocumentMoniker": "C:\\Users\\kunal\\Bootcamp\\Csharp\\bootcamp_new\\Rest Assignment-4\\MovieAPI\\Models\\RequestModels\\MovieRequest.cs",
+              "RelativeDocumentMoniker": "Models\\RequestModels\\MovieRequest.cs",
+              "ToolTip": "C:\\Users\\kunal\\Bootcamp\\Csharp\\bootcamp_new\\Rest Assignment-4\\MovieAPI\\Models\\RequestModels\\MovieRequest.cs",
+              "RelativeToolTip": "Models\\RequestModels\\MovieRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-02T04:30:24.024Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "Gender.cs",
+              "DocumentMoniker": "C:\\Users\\kunal\\Bootcamp\\Csharp\\bootcamp_new\\Rest Assignment-4\\MovieAPI\\Models\\Enums\\Gender.cs",
+              "RelativeDocumentMoniker": "Models\\Enums\\Gender.cs",
+              "ToolTip": "C:\\Users\\kunal\\Bootcamp\\Csharp\\bootcamp_new\\Rest Assignment-4\\MovieAPI\\Models\\Enums\\Gender.cs",
+              "RelativeToolTip": "Models\\Enums\\Gender.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T06:44:17.121Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\kunal\\Bootcamp\\Csharp\\bootcamp_new\\Rest Assignment-4\\MovieAPI\\Repositories\\UserRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\UserRepository.cs",
+              "ToolTip": "C:\\Users\\kunal\\Bootcamp\\Csharp\\bootcamp_new\\Rest Assignment-4\\MovieAPI\\Repositories\\UserRepository.cs",
+              "RelativeToolTip": "Repositories\\UserRepository.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAQwBUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-02T06:13:03.143Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\kunal\\Bootcamp\\Csharp\\bootcamp_new\\Rest Assignment-4\\MovieAPI\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\kunal\\Bootcamp\\Csharp\\bootcamp_new\\Rest Assignment-4\\MovieAPI\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-04-02T07:31:00.911Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\kunal\\Bootcamp\\Csharp\\bootcamp_new\\Rest Assignment-4\\MovieAPI\\Models\\DBModels\\User.cs",
+              "RelativeDocumentMoniker": "Models\\DBModels\\User.cs",
+              "ToolTip": "C:\\Users\\kunal\\Bootcamp\\Csharp\\bootcamp_new\\Rest Assignment-4\\MovieAPI\\Models\\DBModels\\User.cs",
+              "RelativeToolTip": "Models\\DBModels\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-02T05:09:29.136Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\kunal\\Bootcamp\\Csharp\\bootcamp_new\\Rest Assignment-4\\MovieAPI\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\kunal\\Bootcamp\\Csharp\\bootcamp_new\\Rest Assignment-4\\MovieAPI\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-02T05:43:51.196Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "ProducersController.cs",
+              "DocumentMoniker": "C:\\Users\\kunal\\Bootcamp\\Csharp\\bootcamp_new\\Rest Assignment-4\\MovieAPI\\Controllers\\ProducersController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ProducersController.cs",
+              "ToolTip": "C:\\Users\\kunal\\Bootcamp\\Csharp\\bootcamp_new\\Rest Assignment-4\\MovieAPI\\Controllers\\ProducersController.cs",
+              "RelativeToolTip": "Controllers\\ProducersController.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAwDkAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-02T04:58:07.731Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "ProducerService.cs",
+              "DocumentMoniker": "C:\\Users\\kunal\\Bootcamp\\Csharp\\bootcamp_new\\Rest Assignment-4\\MovieAPI\\Services\\ProducerService.cs",
+              "RelativeDocumentMoniker": "Services\\ProducerService.cs",
+              "ToolTip": "C:\\Users\\kunal\\Bootcamp\\Csharp\\bootcamp_new\\Rest Assignment-4\\MovieAPI\\Services\\ProducerService.cs",
+              "RelativeToolTip": "Services\\ProducerService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-02T04:54:05.959Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "IProducerService.cs",
+              "DocumentMoniker": "C:\\Users\\kunal\\Bootcamp\\Csharp\\bootcamp_new\\Rest Assignment-4\\MovieAPI\\Services\\Interfaces\\IProducerService.cs",
+              "RelativeDocumentMoniker": "Services\\Interfaces\\IProducerService.cs",
+              "ToolTip": "C:\\Users\\kunal\\Bootcamp\\Csharp\\bootcamp_new\\Rest Assignment-4\\MovieAPI\\Services\\Interfaces\\IProducerService.cs",
+              "RelativeToolTip": "Services\\Interfaces\\IProducerService.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAAAsAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-02T04:51:46.077Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "IMovieService.cs",
+              "DocumentMoniker": "C:\\Users\\kunal\\Bootcamp\\Csharp\\bootcamp_new\\Rest Assignment-4\\MovieAPI\\Services\\Interfaces\\IMovieService.cs",
+              "RelativeDocumentMoniker": "Services\\Interfaces\\IMovieService.cs",
+              "ToolTip": "C:\\Users\\kunal\\Bootcamp\\Csharp\\bootcamp_new\\Rest Assignment-4\\MovieAPI\\Services\\Interfaces\\IMovieService.cs",
+              "RelativeToolTip": "Services\\Interfaces\\IMovieService.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAAAsAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-02T04:51:23.531Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "MovieApp.csproj",
+              "DocumentMoniker": "C:\\Users\\kunal\\Bootcamp\\Csharp\\bootcamp_new\\Rest Assignment-4\\MovieAPI\\MovieApp.csproj",
+              "RelativeDocumentMoniker": "MovieApp.csproj",
+              "ToolTip": "C:\\Users\\kunal\\Bootcamp\\Csharp\\bootcamp_new\\Rest Assignment-4\\MovieAPI\\MovieApp.csproj",
+              "RelativeToolTip": "MovieApp.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-04-01T08:35:13.392Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "IReviewService.cs",
+              "DocumentMoniker": "C:\\Users\\kunal\\Bootcamp\\Csharp\\bootcamp_new\\Rest Assignment-4\\MovieAPI\\Services\\Interfaces\\IReviewService.cs",
+              "RelativeDocumentMoniker": "Services\\Interfaces\\IReviewService.cs",
+              "ToolTip": "C:\\Users\\kunal\\Bootcamp\\Csharp\\bootcamp_new\\Rest Assignment-4\\MovieAPI\\Services\\Interfaces\\IReviewService.cs",
+              "RelativeToolTip": "Services\\Interfaces\\IReviewService.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAAAsAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-02T04:52:02.549Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "IGenreService.cs",
+              "DocumentMoniker": "C:\\Users\\kunal\\Bootcamp\\Csharp\\bootcamp_new\\Rest Assignment-4\\MovieAPI\\Services\\Interfaces\\IGenreService.cs",
+              "RelativeDocumentMoniker": "Services\\Interfaces\\IGenreService.cs",
+              "ToolTip": "C:\\Users\\kunal\\Bootcamp\\Csharp\\bootcamp_new\\Rest Assignment-4\\MovieAPI\\Services\\Interfaces\\IGenreService.cs",
+              "RelativeToolTip": "Services\\Interfaces\\IGenreService.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAAAsAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-02T04:51:55.421Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "GenreRequest.cs",
+              "DocumentMoniker": "C:\\Users\\kunal\\Bootcamp\\Csharp\\bootcamp_new\\Rest Assignment-4\\MovieAPI\\Models\\RequestModels\\GenreRequest.cs",
+              "RelativeDocumentMoniker": "Models\\RequestModels\\GenreRequest.cs",
+              "ToolTip": "C:\\Users\\kunal\\Bootcamp\\Csharp\\bootcamp_new\\Rest Assignment-4\\MovieAPI\\Models\\RequestModels\\GenreRequest.cs",
+              "RelativeToolTip": "Models\\RequestModels\\GenreRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-02T04:33:03.501Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "ReviewRequest.cs",
+              "DocumentMoniker": "C:\\Users\\kunal\\Bootcamp\\Csharp\\bootcamp_new\\Rest Assignment-4\\MovieAPI\\Models\\RequestModels\\ReviewRequest.cs",
+              "RelativeDocumentMoniker": "Models\\RequestModels\\ReviewRequest.cs",
+              "ToolTip": "C:\\Users\\kunal\\Bootcamp\\Csharp\\bootcamp_new\\Rest Assignment-4\\MovieAPI\\Models\\RequestModels\\ReviewRequest.cs",
+              "RelativeToolTip": "Models\\RequestModels\\ReviewRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-02T04:33:30.457Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "ReviewResponse.cs",
+              "DocumentMoniker": "C:\\Users\\kunal\\Bootcamp\\Csharp\\bootcamp_new\\Rest Assignment-4\\MovieAPI\\Models\\ResponseModels\\ReviewResponse.cs",
+              "RelativeDocumentMoniker": "Models\\ResponseModels\\ReviewResponse.cs",
+              "ToolTip": "C:\\Users\\kunal\\Bootcamp\\Csharp\\bootcamp_new\\Rest Assignment-4\\MovieAPI\\Models\\ResponseModels\\ReviewResponse.cs",
+              "RelativeToolTip": "Models\\ResponseModels\\ReviewResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-02T04:34:48.013Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "LoginResponse.cs",
+              "DocumentMoniker": "C:\\Users\\kunal\\Bootcamp\\Csharp\\bootcamp_new\\Rest Assignment-4\\MovieAPI\\Models\\ResponseModels\\LoginResponse.cs",
+              "RelativeDocumentMoniker": "Models\\ResponseModels\\LoginResponse.cs",
+              "ToolTip": "C:\\Users\\kunal\\Bootcamp\\Csharp\\bootcamp_new\\Rest Assignment-4\\MovieAPI\\Models\\ResponseModels\\LoginResponse.cs",
+              "RelativeToolTip": "Models\\ResponseModels\\LoginResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-02T05:11:05.163Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "GenreResponse.cs",
+              "DocumentMoniker": "C:\\Users\\kunal\\Bootcamp\\Csharp\\bootcamp_new\\Rest Assignment-4\\MovieAPI\\Models\\ResponseModels\\GenreResponse.cs",
+              "RelativeDocumentMoniker": "Models\\ResponseModels\\GenreResponse.cs",
+              "ToolTip": "C:\\Users\\kunal\\Bootcamp\\Csharp\\bootcamp_new\\Rest Assignment-4\\MovieAPI\\Models\\ResponseModels\\GenreResponse.cs",
+              "RelativeToolTip": "Models\\ResponseModels\\GenreResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-02T04:34:44.638Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "IReviewRepository.cs",
+              "DocumentMoniker": "C:\\Users\\kunal\\Bootcamp\\Csharp\\bootcamp_new\\Rest Assignment-4\\MovieAPI\\Repositories\\Interfaces\\IReviewRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\Interfaces\\IReviewRepository.cs",
+              "ToolTip": "C:\\Users\\kunal\\Bootcamp\\Csharp\\bootcamp_new\\Rest Assignment-4\\MovieAPI\\Repositories\\Interfaces\\IReviewRepository.cs",
+              "RelativeToolTip": "Repositories\\Interfaces\\IReviewRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-02T04:43:58.965Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "IProducerRepository.cs",
+              "DocumentMoniker": "C:\\Users\\kunal\\Bootcamp\\Csharp\\bootcamp_new\\Rest Assignment-4\\MovieAPI\\Repositories\\Interfaces\\IProducerRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\Interfaces\\IProducerRepository.cs",
+              "ToolTip": "C:\\Users\\kunal\\Bootcamp\\Csharp\\bootcamp_new\\Rest Assignment-4\\MovieAPI\\Repositories\\Interfaces\\IProducerRepository.cs",
+              "RelativeToolTip": "Repositories\\Interfaces\\IProducerRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-02T04:43:43.172Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "IGenreRepository.cs",
+              "DocumentMoniker": "C:\\Users\\kunal\\Bootcamp\\Csharp\\bootcamp_new\\Rest Assignment-4\\MovieAPI\\Repositories\\Interfaces\\IGenreRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\Interfaces\\IGenreRepository.cs",
+              "ToolTip": "C:\\Users\\kunal\\Bootcamp\\Csharp\\bootcamp_new\\Rest Assignment-4\\MovieAPI\\Repositories\\Interfaces\\IGenreRepository.cs",
+              "RelativeToolTip": "Repositories\\Interfaces\\IGenreRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-02T04:43:50.57Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "Review.cs",
+              "DocumentMoniker": "C:\\Users\\kunal\\Bootcamp\\Csharp\\bootcamp_new\\Rest Assignment-4\\MovieAPI\\Models\\DBModels\\Review.cs",
+              "RelativeDocumentMoniker": "Models\\DBModels\\Review.cs",
+              "ToolTip": "C:\\Users\\kunal\\Bootcamp\\Csharp\\bootcamp_new\\Rest Assignment-4\\MovieAPI\\Models\\DBModels\\Review.cs",
+              "RelativeToolTip": "Models\\DBModels\\Review.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-02T04:39:50.085Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "Producer.cs",
+              "DocumentMoniker": "C:\\Users\\kunal\\Bootcamp\\Csharp\\bootcamp_new\\Rest Assignment-4\\MovieAPI\\Models\\DBModels\\Producer.cs",
+              "RelativeDocumentMoniker": "Models\\DBModels\\Producer.cs",
+              "ToolTip": "C:\\Users\\kunal\\Bootcamp\\Csharp\\bootcamp_new\\Rest Assignment-4\\MovieAPI\\Models\\DBModels\\Producer.cs",
+              "RelativeToolTip": "Models\\DBModels\\Producer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-02T04:39:43.299Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "Genre.cs",
+              "DocumentMoniker": "C:\\Users\\kunal\\Bootcamp\\Csharp\\bootcamp_new\\Rest Assignment-4\\MovieAPI\\Models\\DBModels\\Genre.cs",
+              "RelativeDocumentMoniker": "Models\\DBModels\\Genre.cs",
+              "ToolTip": "C:\\Users\\kunal\\Bootcamp\\Csharp\\bootcamp_new\\Rest Assignment-4\\MovieAPI\\Models\\DBModels\\Genre.cs",
+              "RelativeToolTip": "Models\\DBModels\\Genre.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-02T04:39:12.9Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "LoginRequest.cs",
+              "DocumentMoniker": "C:\\Users\\kunal\\Bootcamp\\Csharp\\bootcamp_new\\Rest Assignment-4\\MovieAPI\\Models\\RequestModels\\LoginRequest.cs",
+              "RelativeDocumentMoniker": "Models\\RequestModels\\LoginRequest.cs",
+              "ToolTip": "C:\\Users\\kunal\\Bootcamp\\Csharp\\bootcamp_new\\Rest Assignment-4\\MovieAPI\\Models\\RequestModels\\LoginRequest.cs",
+              "RelativeToolTip": "Models\\RequestModels\\LoginRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-02T05:10:32.395Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 55,
+              "Title": "SignupRequest.cs",
+              "DocumentMoniker": "C:\\Users\\kunal\\Bootcamp\\Csharp\\bootcamp_new\\Rest Assignment-4\\MovieAPI\\Models\\RequestModels\\SignupRequest.cs",
+              "RelativeDocumentMoniker": "Models\\RequestModels\\SignupRequest.cs",
+              "ToolTip": "C:\\Users\\kunal\\Bootcamp\\Csharp\\bootcamp_new\\Rest Assignment-4\\MovieAPI\\Models\\RequestModels\\SignupRequest.cs",
+              "RelativeToolTip": "Models\\RequestModels\\SignupRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-02T05:10:09.994Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

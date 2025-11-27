@@ -5,7 +5,6 @@ services:
   mssql:
     image: mcr.microsoft.com/mssql/server:2022-latest
     container_name: movie_sql_server
-    # THE MAGIC FIX: Run as root so we can write to the volume
     user: root 
     environment:
       - ACCEPT_EULA=Y

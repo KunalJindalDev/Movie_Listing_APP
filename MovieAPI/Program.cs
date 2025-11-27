@@ -4,7 +4,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using MovieAPI.Data; // Ensure this matches DbInitializer namespace
+using MovieAPI.Data; 
 
 namespace MovieAPI
 {
@@ -22,7 +22,6 @@ namespace MovieAPI
                 {
                     var config = services.GetRequiredService<IConfiguration>();
 
-                    // This will create the DB and all 8 tables automatically
                     DbInitializer.Initialize(config);
                 }
                 catch (Exception ex)
@@ -31,7 +30,6 @@ namespace MovieAPI
                     logger.LogError(ex, "An error occurred setting up the Database.");
                 }
             }
-            // ---------------------------------
 
             host.Run();
         }

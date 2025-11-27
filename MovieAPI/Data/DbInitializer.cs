@@ -12,7 +12,7 @@ namespace MovieAPI.Data
         {
             var connectionString = configuration.GetConnectionString("DefaultConnection");
 
-            // Retry logic (Docker database takes a few seconds to spin up)
+            // Retry logic
             int retries = 10;
             while (retries > 0)
             {
@@ -33,7 +33,6 @@ namespace MovieAPI.Data
                         }
                     }
 
-                    // Now create the Tables
                     using (var connection = new SqlConnection(connectionString))
                     {
                         connection.Open();
@@ -89,7 +88,7 @@ namespace MovieAPI.Data
                     Gender INT
                 )");
 
-            // 2. Tables with Foreign Keys (Must come after)
+            // 2. Tables with Foreign Keys 
             connection.Execute(@"
                 IF OBJECT_ID('Movies', 'U') IS NULL
                 CREATE TABLE Movies (
@@ -111,7 +110,7 @@ namespace MovieAPI.Data
                     FOREIGN KEY (MovieId) REFERENCES Movies(Id) ON DELETE CASCADE
                 )");
 
-            // 3. Many-to-Many Junction Tables (For the Lists in your Movie Model)
+            // 3. Many-to-Many Junction Tables
             connection.Execute(@"
                 IF OBJECT_ID('MovieActors', 'U') IS NULL
                 CREATE TABLE MovieActors (

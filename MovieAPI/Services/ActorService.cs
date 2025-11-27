@@ -13,16 +13,18 @@ namespace MovieApp.Services
 {
     public class ActorService : IActorService
     {
-        private readonly IActorRepository _actorRepository;
+        private readonly IActorReadRepository _actorReadRepository;
+        private readonly IActorWriteRepository _actorWriteRepository;
 
-        public ActorService(IActorRepository actorRepository)
+        public ActorService(IActorReadRepository actorReadRepository, IActorWriteRepository actorWriteRepository)
         {
-            _actorRepository = actorRepository;
+            _actorReadRepository = actorReadRepository;
+            _actorWriteRepository = actorWriteRepository;
         }
 
         public IList<ActorResponse> GetAll()
         {
-            var actors = _actorRepository.GetAll();
+            var actors = _actorReadRepository.GetAll();
             return actors.Select(a => new ActorResponse
             {
                 Id = a.Id,
@@ -40,7 +42,7 @@ namespace MovieApp.Services
                 throw new ArgumentException("Invalid Actor ID.");
             }
 
-            var actor = _actorRepository.GetById(id);
+            var actor = _actorReadRepository.GetById(id);
             if (actor == null)
             {
                 throw new NotFoundException($"Actor with ID {id} not found.");
@@ -77,12 +79,12 @@ namespace MovieApp.Services
                 DOB = request.DOB,
                 Gender = request.Gender
             };
-            return _actorRepository.Add(actor);
+            return _actorWriteRepository.Add(actor);
         }
 
         public bool Update(int id, ActorRequest request)
         {
-            var actor = _actorRepository.GetById(id);
+            var actor = _actorReadRepository.GetById(id);
             if (actor == null)
             {
                 throw new NotFoundException($"Actor with ID {id} not found.");
@@ -105,19 +107,19 @@ namespace MovieApp.Services
             actor.DOB = request.DOB;
             actor.Gender = request.Gender;
 
-            _actorRepository.Update(actor);
+            _actorWriteRepository.Update(actor);
             return true;
         }
 
         public bool Delete(int id)
         {
-            var actor = _actorRepository.GetById(id);
+            var actor = _actorReadRepository.GetById(id);
             if (actor == null)
             {
                 throw new NotFoundException($"Actor with ID {id} not found.");
             }
 
-            _actorRepository.Delete(id);
+            _actorWriteRepository.Delete(id);
             return true;
         }
     }

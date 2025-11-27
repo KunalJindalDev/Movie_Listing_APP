@@ -20,6 +20,8 @@ using Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using MovieApp.Helpers;
+using MovieApp.Extensions;
+using StackExchange.Redis;
 
 namespace MovieAPI
 {
@@ -34,26 +36,40 @@ namespace MovieAPI
 
         public void ConfigureServices(IServiceCollection services)
         {
-            // Register Services and Repositories
-            services.AddScoped<IUserRepository, UserRepository>();
-            services.AddScoped<IUserService, UserService>();
-
-            services.AddScoped<IActorRepository, ActorRepository>();
+            // Register Services and Repositories - Actor (CQRS)
+            services.AddScoped<IActorReadRepository, ActorReadRepository>();
+            services.AddScoped<IActorWriteRepository, ActorWriteRepository>();
             services.AddScoped<IActorService, ActorService>();
 
-            services.AddScoped<IMovieRepository, MovieRepository>();
-            services.AddScoped<IMovieService, MovieService>();
-
-            services.AddScoped<IProducerRepository, ProducerRepository>();
-            services.AddScoped<IProducerService, ProducerService>();
-
-            services.AddScoped<IGenreRepository, GenreRepository>();
+            // Register Services and Repositories - Genre (CQRS)
+            services.AddScoped<IGenreReadRepository, GenreReadRepository>();
+            services.AddScoped<IGenreWriteRepository, GenreWriteRepository>();
             services.AddScoped<IGenreService, GenreService>();
 
-            services.AddScoped<IReviewRepository, ReviewRepository>();
+            // Register Services and Repositories - Producer (CQRS)
+            services.AddScoped<IProducerReadRepository, ProducerReadRepository>();
+            services.AddScoped<IProducerWriteRepository, ProducerWriteRepository>();
+            services.AddScoped<IProducerService, ProducerService>();
+
+            // Register Services and Repositories - Movie (CQRS)
+            services.AddScoped<IMovieReadRepository, MovieReadRepository>();
+            services.AddScoped<IMovieWriteRepository, MovieWriteRepository>();
+            services.AddScoped<IMovieService, MovieService>();
+
+            // Register Services and Repositories - Review (CQRS)
+            services.AddScoped<IReviewReadRepository, ReviewReadRepository>();
+            services.AddScoped<IReviewWriteRepository, ReviewWriteRepository>();
             services.AddScoped<IReviewService, ReviewService>();
 
+            // Register Services and Repositories - User (CQRS)
+            services.AddScoped<IUserReadRepository, UserReadRepository>();
+            services.AddScoped<IUserWriteRepository, UserWriteRepository>();
+            services.AddScoped<IUserService, UserService>();
+
             services.AddSingleton<SupabaseUploader>();
+
+            // Register Redis and other infrastructure
+            services.AddMovieApiInfrastructure(Configuration);
 
             // Enable JWT Authentication
             var key = Encoding.UTF8.GetBytes(Configuration["Jwt:Key"]);

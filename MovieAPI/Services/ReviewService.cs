@@ -12,18 +12,20 @@ namespace MovieApp.Services
 {
     public class ReviewService : IReviewService
     {
-        private readonly IReviewRepository _reviewRepository;
-        private readonly IMovieRepository _movieRepository;
+        private readonly IReviewReadRepository _reviewReadRepository;
+        private readonly IReviewWriteRepository _reviewWriteRepository;
+        private readonly IMovieReadRepository _movieReadRepository;
 
-        public ReviewService(IReviewRepository reviewRepository, IMovieRepository movieRepository)
+        public ReviewService(IReviewReadRepository reviewReadRepository, IReviewWriteRepository reviewWriteRepository, IMovieReadRepository movieReadRepository)
         {
-            _reviewRepository = reviewRepository;
-            _movieRepository = movieRepository;
+            _reviewReadRepository = reviewReadRepository;
+            _reviewWriteRepository = reviewWriteRepository;
+            _movieReadRepository = movieReadRepository;
         }
 
         public IList<ReviewResponse> GetAll()
         {
-            var reviews = _reviewRepository.GetAll();
+            var reviews = _reviewReadRepository.GetAll();
             return reviews.Select(r => new ReviewResponse
             {
                 Id = r.Id,
@@ -34,7 +36,7 @@ namespace MovieApp.Services
 
         public ReviewResponse GetById(int id)
         {
-            var review = _reviewRepository.GetById(id);
+            var review = _reviewReadRepository.GetById(id);
             if (review == null)
                 throw new NotFoundException($"Review with id {id} not found.");
 
@@ -51,7 +53,7 @@ namespace MovieApp.Services
             if (string.IsNullOrWhiteSpace(request.Message))
                 throw new ArgumentException("Review message cannot be empty.");
 
-            if (_movieRepository.GetById(request.MovieId) == null)
+            if (_movieReadRepository.GetById(request.MovieId) == null)
                 throw new NotFoundException($"Movie with id {request.MovieId} not found.");
 
             var review = new Review
@@ -59,12 +61,12 @@ namespace MovieApp.Services
                 Message = request.Message,
                 MovieId = request.MovieId
             };
-            return _reviewRepository.Add(review);
+            return _reviewWriteRepository.Add(review);
         }
 
         public bool Update(int id, ReviewRequest request)
         {
-            var review = _reviewRepository.GetById(id);
+            var review = _reviewReadRepository.GetById(id);
             if (review == null)
                 throw new NotFoundException($"Review with id {id} not found.");
 
@@ -73,17 +75,17 @@ namespace MovieApp.Services
 
             review.Message = request.Message;
 
-            _reviewRepository.Update(review);
+            _reviewWriteRepository.Update(review);
             return true;
         }
 
         public bool Delete(int id)
         {
-            var review = _reviewRepository.GetById(id);
+            var review = _reviewReadRepository.GetById(id);
             if (review == null)
                 throw new NotFoundException($"Review with id {id} not found.");
 
-            _reviewRepository.Delete(id);
+            _reviewWriteRepository.Delete(id);
             return true;
         }
     }

@@ -13,16 +13,18 @@ namespace MovieApp.Services
 {
     public class ProducerService : IProducerService
     {
-        private readonly IProducerRepository _producerRepository;
+        private readonly IProducerReadRepository _producerReadRepository;
+        private readonly IProducerWriteRepository _producerWriteRepository;
 
-        public ProducerService(IProducerRepository producerRepository)
+        public ProducerService(IProducerReadRepository producerReadRepository, IProducerWriteRepository producerWriteRepository)
         {
-            _producerRepository = producerRepository;
+            _producerReadRepository = producerReadRepository;
+            _producerWriteRepository = producerWriteRepository;
         }
 
         public IList<ProducerResponse> GetAll()
         {
-            var producers = _producerRepository.GetAll();
+            var producers = _producerReadRepository.GetAll();
             return producers.Select(p => new ProducerResponse
             {
                 Id = p.Id,
@@ -35,7 +37,7 @@ namespace MovieApp.Services
 
         public ProducerResponse GetById(int id)
         {
-            var producer = _producerRepository.GetById(id);
+            var producer = _producerReadRepository.GetById(id);
             if (producer == null)
                 throw new NotFoundException($"Producer with id {id} not found.");
 
@@ -71,7 +73,7 @@ namespace MovieApp.Services
                 Gender = request.Gender
             };
 
-            return _producerRepository.Add(producer);
+            return _producerWriteRepository.Add(producer);
         }
 
         public bool Update(int id, ProducerRequest request)
@@ -88,7 +90,7 @@ namespace MovieApp.Services
             if (!Enum.IsDefined(typeof(Gender), request.Gender))
                 throw new ArgumentException("Invalid gender specified.");
 
-            var producer = _producerRepository.GetById(id);
+            var producer = _producerReadRepository.GetById(id);
             if (producer == null)
                 throw new NotFoundException($"Producer with id {id} not found.");
 
@@ -97,17 +99,17 @@ namespace MovieApp.Services
             producer.DOB = request.DOB;
             producer.Gender = request.Gender;
 
-            _producerRepository.Update(producer);
+            _producerWriteRepository.Update(producer);
             return true;
         }
 
         public bool Delete(int id)
         {
-            var producer = _producerRepository.GetById(id);
+            var producer = _producerReadRepository.GetById(id);
             if (producer == null)
                 throw new NotFoundException($"Producer with id {id} not found.");
 
-            _producerRepository.Delete(id);
+            _producerWriteRepository.Delete(id);
             return true;
         }
     }

@@ -1,20 +1,39 @@
-﻿using System.Collections.Generic;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text.Json;
 using MovieApp.Models.DBModels;
-using MovieApp.Models.RequestModels;
 using MovieApp.Models.ResponseModels;
 using MovieApp.Repositories.Interfaces;
 using Microsoft.Extensions.Configuration;
-using System.Linq;
+using StackExchange.Redis;
 using Dapper;
 
 namespace MovieApp.Repositories
 {
-    public class MovieRepository : BaseRepository, IMovieRepository
+    public class MovieReadRepository : BaseRepository, IMovieReadRepository
     {
-        public MovieRepository(IConfiguration configuration) : base(configuration) { }
+        private readonly IDatabase _cache;
+        private readonly JsonSerializerOptions _jsonOptions;
+        private const string AllKey = "Movies:All";
+        private const string AllWithYearKeyPrefix = "Movies:Year:";
+        private const string ItemKeyPrefix = "Movie:";
+
+        public MovieReadRepository(IConfiguration configuration, IConnectionMultiplexer multiplexer) : base(configuration)
+        {
+            _cache = multiplexer.GetDatabase();
+            _jsonOptions = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
+        }
 
         public IList<MovieResponse> GetAll(int? year)
         {
+            string cacheKey = year.HasValue ? AllWithYearKeyPrefix + year.Value : AllKey;
+            var cached = _cache.StringGet(cacheKey);
+            if (cached.HasValue)
+            {
+                return JsonSerializer.Deserialize<List<MovieResponse>>(cached!, _jsonOptions);
+            }
+
             using var connection = CreateConnection();
 
             var sql = @"
@@ -35,7 +54,7 @@ LEFT JOIN Genres G ON MG.GenreId = G.Id";
 
             var movieDictionary = new Dictionary<int, MovieResponse>();
 
-            connection.Query<Movie, ProducerResponse, ActorResponse, string, MovieResponse>(
+            connection.Query<MovieResponse, ProducerResponse, ActorResponse, string, MovieResponse>(
                 sql,
                 (movie, producer, actor, genre) =>
                 {
@@ -68,13 +87,20 @@ LEFT JOIN Genres G ON MG.GenreId = G.Id";
                 splitOn: "Id,Id,Name"
             );
 
-            return movieDictionary.Values.ToList();
+            var result = movieDictionary.Values.ToList();
+            _cache.StringSet(cacheKey, JsonSerializer.Serialize(result, _jsonOptions), TimeSpan.FromMinutes(10));
+            return result;
         }
-
-
 
         public MovieResponse GetById(int id)
         {
+            string key = ItemKeyPrefix + id;
+            var cached = _cache.StringGet(key);
+            if (cached.HasValue)
+            {
+                return JsonSerializer.Deserialize<MovieResponse>(cached!, _jsonOptions);
+            }
+
             using var connection = CreateConnection();
 
             var sql = @"
@@ -117,48 +143,12 @@ WHERE M.Id = @Id";
                 splitOn: "Id,Id,Name"
             );
 
+            if (movie != null)
+            {
+                _cache.StringSet(key, JsonSerializer.Serialize(movie, _jsonOptions), TimeSpan.FromMinutes(10));
+            }
+
             return movie;
-        }
-
-
-
-        public int Add(Movie movie)
-        {
-            string procedure = "usp_AddMovie"; // Using stored procedure
-
-            return Add(procedure, new
-            {
-                movie.Name,
-                movie.YearOfRelease,
-                movie.Plot,
-                movie.Poster,
-                movie.ProducerId,
-                ActorIds = string.Join(",", movie.ActorIds),
-                GenreIds = string.Join(",", movie.GenreIds)
-            });
-        }
-
-        public void Update(Movie movie)
-        {
-            string procedure = "usp_UpdateMovie"; // Using stored procedure
-
-            Update(procedure, new
-            {
-                MovieId = movie.Id,
-                movie.Name,
-                movie.YearOfRelease,
-                movie.Plot,
-                movie.Poster,
-                movie.ProducerId,
-                ActorIds = string.Join(",", movie.ActorIds),
-                GenreIds = string.Join(",", movie.GenreIds)
-            });
-        }
-
-        public void Delete(int id)
-        {
-            string sql = "DELETE FROM Movies WHERE Id = @Id";
-            Delete(sql, new { Id = id });
         }
     }
 }

@@ -6,22 +6,24 @@ using MovieApp.Models.RequestModels;
 using MovieApp.Models.ResponseModels;
 using MovieApp.Repositories.Interfaces;
 using MovieApp.Services.Interfaces;
-using MovieApp.Exceptions; 
+using MovieApp.Exceptions;
 
 namespace MovieApp.Services
 {
     public class GenreService : IGenreService
     {
-        private readonly IGenreRepository _genreRepository;
+        private readonly IGenreReadRepository _genreReadRepository;
+        private readonly IGenreWriteRepository _genreWriteRepository;
 
-        public GenreService(IGenreRepository genreRepository)
+        public GenreService(IGenreReadRepository genreReadRepository, IGenreWriteRepository genreWriteRepository)
         {
-            _genreRepository = genreRepository;
+            _genreReadRepository = genreReadRepository;
+            _genreWriteRepository = genreWriteRepository;
         }
 
         public IList<GenreResponse> GetAll()
         {
-            var genres = _genreRepository.GetAll();
+            var genres = _genreReadRepository.GetAll();
             return genres.Select(g => new GenreResponse
             {
                 Id = g.Id,
@@ -36,7 +38,7 @@ namespace MovieApp.Services
                 throw new ArgumentException("Invalid genre ID.");
             }
 
-            var genre = _genreRepository.GetById(id);
+            var genre = _genreReadRepository.GetById(id);
             if (genre == null)
             {
                 throw new NotFoundException($"Genre with ID {id} not found.");
@@ -57,7 +59,7 @@ namespace MovieApp.Services
             if (request.Name.Length > 100)
                 throw new ArgumentException("Genre name cannot be longer than 100 characters.");
 
-            var genres = _genreRepository.GetAll();
+            var genres = _genreReadRepository.GetAll();
             if (genres.Any(g => g.Name.Equals(request.Name, StringComparison.OrdinalIgnoreCase)))
                 throw new ArgumentException("A genre with this name already exists.");
 
@@ -65,7 +67,7 @@ namespace MovieApp.Services
             {
                 Name = request.Name
             };
-            return _genreRepository.Add(genre);
+            return _genreWriteRepository.Add(genre);
         }
 
         public bool Update(int id, GenreRequest request)
@@ -76,30 +78,30 @@ namespace MovieApp.Services
             if (request.Name.Length > 100)
                 throw new ArgumentException("Genre name cannot be longer than 100 characters.");
 
-            var genres = _genreRepository.GetAll();
+            var genres = _genreReadRepository.GetAll();
             if (genres.Any(g => g.Name.Equals(request.Name, StringComparison.OrdinalIgnoreCase)))
                 throw new ArgumentException("A genre with this name already exists.");
 
-            var genre = _genreRepository.GetById(id);
+            var genre = _genreReadRepository.GetById(id);
             if (genre == null)
             {
                 throw new NotFoundException($"Genre with ID {id} not found.");
             }
 
             genre.Name = request.Name;
-            _genreRepository.Update(genre);
+            _genreWriteRepository.Update(genre);
             return true;
         }
 
         public bool Delete(int id)
         {
-            var genre = _genreRepository.GetById(id);
+            var genre = _genreReadRepository.GetById(id);
             if (genre == null)
             {
                 throw new NotFoundException($"Genre with ID {id} not found.");
             }
 
-            _genreRepository.Delete(id);
+            _genreWriteRepository.Delete(id);
             return true;
         }
     }

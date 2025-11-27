@@ -1,25 +1,20 @@
-﻿using System.Collections.Generic;
+using System;
 using MovieApp.Models.DBModels;
 using MovieApp.Repositories.Interfaces;
 using Microsoft.Extensions.Configuration;
-using System.Linq;
+using StackExchange.Redis;
 
 namespace MovieApp.Repositories
 {
-    public class ProducerRepository : BaseRepository, IProducerRepository
+    public class ProducerWriteRepository : BaseRepository, IProducerWriteRepository
     {
-        public ProducerRepository(IConfiguration configuration) : base(configuration) { }
+        private readonly IDatabase _cache;
+        private const string AllKey = "Producers:All";
+        private const string ItemKeyPrefix = "Producer:";
 
-        public IList<Producer> GetAll()
+        public ProducerWriteRepository(IConfiguration configuration, IConnectionMultiplexer multiplexer) : base(configuration)
         {
-            string sql = "SELECT * FROM Producers";
-            return GetAll<Producer>(sql).ToList();
-        }
-
-        public Producer GetById(int id)
-        {
-            string sql = "SELECT * FROM Producers WHERE Id = @Id";
-            return GetById<Producer>(sql, new { Id = id });
+            _cache = multiplexer.GetDatabase();
         }
 
         public int Add(Producer producer)
@@ -28,13 +23,17 @@ namespace MovieApp.Repositories
 INSERT INTO Producers (Name, DOB, Bio, Gender)
 VALUES (@Name, @DOB, @Bio, @Gender); 
 SELECT CAST(SCOPE_IDENTITY() AS INT);";
-            return Add(sql, new
+            
+            int id = Add(sql, new
             {
                 producer.Name,
                 producer.DOB,
                 producer.Bio,
                 producer.Gender
             });
+
+            _cache.KeyDelete(AllKey);
+            return id;
         }
 
         public void Update(Producer producer)
@@ -43,6 +42,7 @@ SELECT CAST(SCOPE_IDENTITY() AS INT);";
 UPDATE Producers 
 SET Name = @Name, DOB = @DOB, Bio = @Bio, Gender = @Gender
 WHERE Id = @Id";
+            
             Update(sql, new
             {
                 producer.Name,
@@ -51,12 +51,18 @@ WHERE Id = @Id";
                 producer.Gender,
                 producer.Id
             });
+
+            _cache.KeyDelete(AllKey);
+            _cache.KeyDelete(ItemKeyPrefix + producer.Id);
         }
 
         public void Delete(int id)
         {
             string sql = "DELETE FROM Producers WHERE Id = @Id";
             Delete(sql, new { Id = id });
+
+            _cache.KeyDelete(AllKey);
+            _cache.KeyDelete(ItemKeyPrefix + id);
         }
     }
 }

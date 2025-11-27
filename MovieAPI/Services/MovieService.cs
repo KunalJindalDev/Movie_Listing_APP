@@ -12,16 +12,18 @@ namespace MovieApp.Services
 {
     public class MovieService : IMovieService
     {
-        private readonly IMovieRepository _movieRepository;
+        private readonly IMovieReadRepository _movieReadRepository;
+        private readonly IMovieWriteRepository _movieWriteRepository;
 
-        public MovieService(IMovieRepository movieRepository)
+        public MovieService(IMovieReadRepository movieReadRepository, IMovieWriteRepository movieWriteRepository)
         {
-            _movieRepository = movieRepository;
+            _movieReadRepository = movieReadRepository;
+            _movieWriteRepository = movieWriteRepository;
         }
 
         public IList<MovieResponse> GetAll(int? year)
         {
-            var movies = _movieRepository.GetAll(year);
+            var movies = _movieReadRepository.GetAll(year);
 
             return movies.Select(m => new MovieResponse
             {
@@ -56,7 +58,7 @@ namespace MovieApp.Services
                 throw new ArgumentException("Invalid Movie ID.");
             }
 
-            var movie = _movieRepository.GetById(id);
+            var movie = _movieReadRepository.GetById(id);
             if (movie == null) return null;
 
             return new MovieResponse
@@ -109,7 +111,7 @@ namespace MovieApp.Services
 
             try
             {
-                return _movieRepository.Add(movie);
+                return _movieWriteRepository.Add(movie);
             }
             catch (SqlException ex) when (ex.Number == 547) // FK violation
             {
@@ -136,7 +138,7 @@ namespace MovieApp.Services
                 GenreIds = request.GenreIds
             };
 
-            _movieRepository.Update(movie);
+            _movieWriteRepository.Update(movie);
             return true;
         }
 
@@ -148,10 +150,10 @@ namespace MovieApp.Services
                 throw new ArgumentException("Invalid Movie ID.");
             }
 
-            var movie = _movieRepository.GetById(id);
+            var movie = _movieReadRepository.GetById(id);
             if (movie == null) return false;
 
-            _movieRepository.Delete(id);
+            _movieWriteRepository.Delete(id);
             return true;
         }
 

@@ -15,15 +15,17 @@ namespace Services
 {
     public class UserService : IUserService
     {
-        private readonly IUserRepository _userRepository;
+        private readonly IUserReadRepository _userReadRepository;
+        private readonly IUserWriteRepository _userWriteRepository;
         private readonly string _jwtSecret;
         private readonly string _jwtIssuer;
         private readonly string _jwtAudience;
         private readonly int _jwtExpirationHours;
 
-        public UserService(IUserRepository userRepository, IConfiguration configuration)
+        public UserService(IUserReadRepository userReadRepository, IUserWriteRepository userWriteRepository, IConfiguration configuration)
         {
-            _userRepository = userRepository;
+            _userReadRepository = userReadRepository;
+            _userWriteRepository = userWriteRepository;
             _jwtSecret = configuration["Jwt:Key"]; 
             _jwtIssuer = configuration["Jwt:Issuer"];
             _jwtAudience = configuration["Jwt:Audience"];
@@ -41,7 +43,7 @@ namespace Services
                 return false; 
             }
 
-            if (_userRepository.GetByEmail(request.Email) != null)
+            if (_userReadRepository.GetByEmail(request.Email) != null)
             {
                 return false; 
             }
@@ -59,13 +61,13 @@ namespace Services
                 PasswordHash = hashedPassword
             };
 
-            _userRepository.Create(user);
+            _userWriteRepository.Create(user);
             return true;
         }
 
         public LoginResponse Login(LoginRequest request)
         {
-            var user = _userRepository.GetByEmail(request.Email);
+            var user = _userReadRepository.GetByEmail(request.Email);
             if (user == null || !BCrypt.Net.BCrypt.Verify(request.Password, user.PasswordHash))
             {
                 return null; 
@@ -81,12 +83,6 @@ namespace Services
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_jwtSecret));
 
             var credentials = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
-
-            //var claims = new[]
-            //{
-            //    new Claim(JwtRegisteredClaimNames.Sub, user.Email),
-            //    new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
-            //};
 
             var claims = new[]
             {

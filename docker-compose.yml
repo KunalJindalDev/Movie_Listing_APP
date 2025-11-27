@@ -1,0 +1,45 @@
+version: '3.8'
+
+services:
+  # 1. The Database
+  mssql:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: movie_sql_server
+    # THE MAGIC FIX: Run as root so we can write to the volume
+    user: root 
+    environment:
+      - ACCEPT_EULA=Y
+      - MSSQL_SA_PASSWORD=CloudNative2025
+    ports:
+      - "1433:1433"
+    volumes:
+      - sql-data:/var/opt/mssql/data
+
+  # 2. The Cache
+  redis:
+    image: redis:7-alpine
+    container_name: movie_redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-data:/data
+
+  # 3. The API
+  movieapi:
+    build:
+      context: .
+      dockerfile: MovieAPI/Dockerfile
+    container_name: movie_api_core
+    depends_on:
+      - redis
+      - mssql
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__DefaultConnection=Server=mssql;Database=MovieDb;User Id=sa;Password=CloudNative2025;TrustServerCertificate=True;
+      - Redis__Configuration=redis:6379
+    ports:
+      - "5000:80"
+
+volumes:
+  redis-data:
+  sql-data:
